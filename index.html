@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/welcomePage.css">
+    <link rel="stylesheet" href="assets/css/welcomePage-breakpoints.css">
+    <link rel="stylesheet" href="assets/css/aboutPage.css">
+    <link rel="stylesheet" href="assets/css/aboutPage-breakpoints.css">
+    <link rel="stylesheet" href="assets/css/calendar.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/transition.css">
+      
+    <title>Organize.js!</title>
+  </head>
+  <body>
+      
+      <!-- Welcome Page -->
+      
+    <div id="welcomePage" class="welcome-page container-fluid d-flex justify-content-center align-items-center flex-column page active">
+        <h1 class="display-2 organize">Organize<span class="dotJS">.js</span></h1>
+        <h2 class="display-4">Develop your time better!</h2>
+        <button id="beginBtn" type="button" class="my-btn btn btn-lg btn-begin">Begin!</button>
+        <div class="sign_container">
+            <span>Implemented by<br><span class="me">Mateusz Wandzel</span></span>
+        </div>
+    </div>
+      
+      <!-- About -->
+      
+    <div id="about" class="about-container container-fluid d-flex justify-content-center align-items-center flex-column page">
+        <img src="assets/img/me.jpg" alt="myphoto" class="rounded-circle">
+        <h5 class="display-4">Hi<span class="dotJS">!</span></h5>
+        <p class="display-4">My name is Mateusz Wandzel and I'm living in Gliwice city. <br>I'm young Frontend Developer who deceided to code Organize<span class="dotJS">.js</span> for developing better our time.</p>
+        <button id="aboutBtn" type="button" class="my-btn btn btn-lg btn-begin">Use it!</button>
+    </div>  
+      
+      <!-- Application -->
+      
+    <div id="calendar-app" class="page">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand display-4" href="#">Organize<span class="dotJS">.js</span></a>
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <span class="navbar-text">    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <span class="fa-layers fa-fw">   
+            <i class="fas fa-envelope btn-icon"></i> 
+                 <span class="fa-layers-counter display-4"></span>
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-messages display-4 notification" aria-labelledby="navbarDropdown">
+              <a class="dropdown-notification" href="#">You don't have any messages.</a>
+            </div>
+        </li>
+        </span>        
+        <span class="navbar-text">    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <span class="fa-layers fa-fw">   
+            <i class="fas fa-bell btn-icon"></i> 
+                 <span class="fa-layers-counter display-4"></span>
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-notification display-4 notification" aria-labelledby="navbarDropdown">
+              <a class="dropdown-notification" href="#">You don't have notifications.</a>
+            </div>
+        </li>
+        </span>    
+        <span class="navbar-text">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/img/thumbnail.jpg" alt="profile thumbnail" class="rounded-circle border border-light profile-thumbnail">
+                <span class="profile_name display-4">Mateusz Wandzel</span>
+            </a>
+            <div class="dropdown-menu dropdown-user-menu display-4" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><i class="far fa-clock icon-menu"></i>Your day</a>
+              <a class="dropdown-item" href="#"><i class="far fa-address-book icon-menu"></i>Contact list</a>    
+              <a class="dropdown-item" href="#"><i class="fas fa-calendar-alt icon-menu"></i>Calendar</a>
+              <a class="dropdown-item" href="#"><i class="fas fa-money-bill-alt icon-menu"></i>Exchange rate</a>                
+              <a class="dropdown-item" href="#"><i class="fas fa-list icon-menu"></i>To-Do</a>
+              <a class="dropdown-item" href="#"><i class="far fa-sticky-note icon-menu"></i>Note</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt icon-menu"></i>Logout</a>
+            </div>
+        </li>
+        </span>
+        </nav>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="calendar-app-container container-fluid d-flex justify-content-center align-items-center">
+                <div class="calendar_container container-fluid d-flex justify-content-center align-items-center flex-column">
+                    <div id="clock" class="d-flex justify-content-center align-items-center clock">
+                        <span id="hour"></span>
+                    </div>
+                    <div id="calendar-day-view">
+                        <div class="content ">
+                            <div class="prev">&#10094;</div>
+                            <div class="next">&#10095;</div>
+                            <div id="day"></div>
+                            <div id="calendar-month-year"><span id="month"></span><span id="year"></span></div>
+                            <i class="far fa-calendar-alt calendar-view-icon"></i>
+                        </div>                     
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center list-group calendar_list">
+                <ul class="display-4  events_list">
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">8:00</span><textarea maxlength="85" class="display-4 event_note"></textarea><i class="close">&times;</i></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">9:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">10:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">11:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">12:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">13:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">14:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">15:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">16:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">17:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">17:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                    <li class="list-group-item container-fluid d-flex align-items-center event"><span class="event_hour">18:00</span><textarea maxlength="85" class="display-4 event_note"></textarea></li>
+                </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="assets/js/pagetransitions.js"></script>
+    <script src="assets/js/calendar-app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    overflow: hidden;
+}
+.page{
+    position:absolute;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: ease-in-out 1s all;
+}
+.page.active {
+    visibility: visible;
+    transform: translateX(0%) !important;
+}
